@@ -41,6 +41,6 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return accountName + "|" + postedAt + "|" + type + "|" + amount + "|" + note;
+        return accountName + "|" + amount + "|" + postedAt + "|" + type + "|" + note;
     }
 }
