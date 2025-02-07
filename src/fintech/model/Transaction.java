@@ -1,19 +1,17 @@
 package fintech.model;
 
-import java.time.LocalDateTime;
-
 /**
  * 12S23006 - Cardolan Sinaga
  * 12S23051 - Theresia Silaban
  */
 public class Transaction {
     private String accountName;
-    private LocalDateTime postedAt;
+    private String postedAt;
     private String type;
     private double amount;
     private String note;
 
-    public Transaction(String accountName, double amount, LocalDateTime postedAt, String note) {
+    public Transaction(String accountName, double amount, String postedAt, String note) {
         this.accountName = accountName;
         this.amount = amount;
         this.postedAt = postedAt;
@@ -25,7 +23,7 @@ public class Transaction {
         return accountName;
     }
 
-    public LocalDateTime getPostedAt() {
+    public String getPostedAt() {
         return postedAt;
     }
 

@@ -2,8 +2,6 @@ package fintech.driver;
 
 import fintech.model.Account;
 import fintech.model.Transaction;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -31,7 +29,7 @@ public class Driver2 {
             } else if ("create-transaction".equals(command)) {
                 String accountName = scanner.nextLine();
                 double amount = Double.parseDouble(scanner.nextLine());
-                LocalDateTime postedAt = LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
+                String postedAt = scanner.nextLine();
                 String note = scanner.nextLine();
 
                 Account account = accounts.get(accountName);
