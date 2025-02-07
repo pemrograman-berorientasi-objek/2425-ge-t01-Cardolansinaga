@@ -9,11 +9,12 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * @author 12S23006 - Cardolan Sinaga
- * @author 12S23051 - Theresia Silaban
+ * 12S23006 - Cardolan Sinaga
+ * 12S23051 - Theresia Silaban
  */
 public class Driver2 {
     private static Map<String, Account> accounts = new HashMap<>();
+    private static int transactionCounter = 0;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -35,9 +36,10 @@ public class Driver2 {
 
                 Account account = accounts.get(accountName);
                 if (account != null) {
+                    transactionCounter++;
                     Transaction transaction = new Transaction(accountName, amount, postedAt, note);
                     account.updateBalance(amount);
-                    System.out.println(transaction + "|" + account.getBalance());
+                    System.out.println(transactionCounter + "|" + transaction + "|" + account.getBalance());
                 } else {
                     System.out.println("Account not found");
                 }
